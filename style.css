@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 10px; /* Уменьшенный отступ */
+  padding: 8px 10px;
   background: #f9f9f9;
   border-bottom: 1px solid #ddd;
   z-index: 1000;
@@ -42,14 +42,14 @@ body {
 }
 
 .navbar-left img {
-  height: 32px; /* Уменьшенный логотип */
+  height: 32px;
   margin-right: 6px;
 }
 
 .navbar-center {
   flex-direction: column;
   align-items: stretch;
-  gap: 4px; /* Уменьшенный интервал */
+  gap: 4px;
   flex-grow: 1;
   max-width: 100%;
 }
@@ -58,9 +58,9 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 13px; /* Уменьшенный шрифт */
-  padding: 4px 8px; /* Уменьшенный отступ */
-  border-radius: 18px; /* Немного уменьшен радиус */
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 18px;
   background: #fff;
   border: 1px solid #0b3f28;
   transition: all 0.3s ease;
@@ -77,10 +77,10 @@ body {
 }
 
 .navbar-center .search-input {
-  padding: 4px 8px; /* Уменьшенный отступ */
+  padding: 4px 8px;
   border: 1px solid #ddd;
-  border-radius: 18px; /* Немного уменьшен радиус */
-  font-size: 12px; /* Уменьшенный шрифт */
+  border-radius: 18px;
+  font-size: 12px;
   width: 100%;
   max-width: 100%;
   outline: none;
@@ -94,11 +94,11 @@ body {
 }
 
 .navbar-right a {
-  margin-left: 4px; /* Уменьшенный отступ */
+  margin-left: 4px;
 }
 
 .navbar-right .icon {
-  width: 18px; /* Уменьшенный размер иконок */
+  width: 18px;
   height: 18px;
   transition: transform 0.2s ease;
 }
@@ -116,13 +116,13 @@ body {
 
 .catalog-section {
   margin-bottom: 40px;
-  margin-top: 60px; /* Уменьшен, но можно увеличить если нужно */
+  margin-top: 60px;
 }
 
 /* Стили для секции "Выгодное предложение" */
 .promo-offers {
   margin-bottom: 40px;
-  margin-top: 60px; /* Увеличен для избежания перекрытия */
+  margin-top: 60px;
 }
 
 .promo-container {
@@ -314,7 +314,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   display: none;
   align-items: center;
   justify-content: center;
@@ -325,16 +325,38 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  max-width: 90%;
+  max-width: 600px;
+  width: 90%;
   max-height: 80vh;
   overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   box-sizing: border-box;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #b00;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: #d00;
 }
 
 .modal-content h2 {
   margin: 0 0 16px;
   font-size: 20px;
   text-align: center;
+  color: #0b3f28;
 }
 
 .modal-content h3 {
@@ -345,15 +367,39 @@ body {
 .perfume-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 60px; /* Space for fixed button */
+  padding: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .perfume-list label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.perfume-list label:hover {
+  background: #e6f0ea;
+}
+
+.perfume-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.perfume-list input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .modal-content input,
@@ -376,6 +422,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 12px;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
 }
 
 .modal-actions button {
@@ -390,6 +441,7 @@ body {
   background: #0b3f28;
   color: white;
   border: none;
+  flex: 1;
 }
 
 #confirm-combo:disabled {
@@ -402,6 +454,7 @@ body {
   background: white;
   border: 1px solid #0b3f28;
   color: #0b3f28;
+  flex: 1;
 }
 
 #close-modal:hover,
@@ -573,7 +626,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999; /* Ниже navbar, но выше контента */
+  z-index: 999;
   display: none;
 }
 
@@ -608,7 +661,7 @@ body {
 /* Стили уведомления */
 .notification {
   position: fixed;
-  top: 60px; /* Уменьшен для соответствия компактному navbar */
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   background: #0b3f28;
@@ -631,7 +684,7 @@ body {
 /* Адаптация */
 @media (min-width: 769px) {
   .navbar {
-    padding: 10px 20px; /* Немного уменьшен для ПК */
+    padding: 10px 20px;
     flex-direction: row;
     align-items: center;
   }
@@ -698,8 +751,8 @@ body {
   .navbar {
     flex-direction: column;
     align-items: stretch;
-    padding: 6px 8px; /* Уменьшенный отступ */
-    gap: 3px; /* Уменьшенный интервал */
+    padding: 6px 8px;
+    gap: 3px;
   }
 
   .navbar-left,
@@ -716,19 +769,19 @@ body {
 
   .navbar-center {
     flex-direction: column;
-    gap: 3px; /* Уменьшенный интервал */
+    gap: 3px;
   }
 
   .navbar-center .search-input {
     max-width: 100%;
     margin-bottom: 4px;
     font-size: 11px;
-    padding: 3px 6px; /* Уменьшенный отступ */
+    padding: 3px 6px;
   }
 
   .navbar-center .section-link {
     font-size: 11px;
-    padding: 3px 6px; /* Уменьшенный отступ */
+    padding: 3px 6px;
     margin: 1px 0;
   }
 
@@ -737,11 +790,11 @@ body {
   }
 
   .catalog-section {
-    margin-top: 70px; /* Увеличен для избежания перекрытия */
+    margin-top: 70px;
   }
 
   .promo-offers {
-    margin-top: 70px; /* Увеличен для избежания перекрытия */
+    margin-top: 70px;
   }
 
   .promo-container {
@@ -784,36 +837,36 @@ body {
   }
 
   .notification {
-    top: 70px; /* Уменьшен для соответствия компактному navbar */
+    top: 70px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 4px 6px; /* Ещё более уменьшенный отступ */
+    padding: 4px 6px;
   }
 
   .navbar-left img {
-    height: 24px; /* Уменьшенный логотип */
+    height: 24px;
     margin-right: 4px;
   }
 
   .navbar-center .section-link {
     font-size: 10px;
-    padding: 2px 4px; /* Уменьшенный отступ */
+    padding: 2px 4px;
   }
 
   .navbar-center .search-input {
     font-size: 10px;
-    padding: 2px 4px; /* Уменьшенный отступ */
+    padding: 2px 4px;
   }
 
   .catalog-section {
-    margin-top: 80px; /* Увеличен для избежания перекрытия */
+    margin-top: 80px;
   }
 
   .promo-offers {
-    margin-top: 80px; /* Увеличен для избежания перекрытия */
+    margin-top: 80px;
   }
 
   .promo-container {
@@ -883,7 +936,7 @@ body {
   .notification {
     font-size: 10px;
     padding: 5px 8px;
-    top: 80px; /* Уменьшен для соответствия компактному navbar */
+    top: 80px;
   }
 
   .btn-primary {
@@ -893,5 +946,29 @@ body {
 
   .product-image {
     height: 100px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .perfume-list label {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .perfume-list input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .modal-actions {
+    padding: 8px 0;
+  }
+
+  .modal-actions button {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
