@@ -125,8 +125,6 @@ const comboConfigs = {
       "Escentric 04 Escentric Molecules ( unisex )",
       "Black Afgano Nasomatto ( unisex )",
       "Mukhallat Montale ( unisex )"
-      
-      
     ]
   },
   "combo-million": {
@@ -326,7 +324,7 @@ const comboConfigs = {
       "Roses Must Montale ( женский )",
       "Dark Purple Montale ( женский )",
       "Dolce Violet Dolce&Gabbana ( женский )",
-      "Dole Peony Dolce&Gabbana ( женский )",
+      "Miss Dior Blooming Bouquet ( женский )",
 
       "Angels' Share By Kilian ( unisex )",
       "Kirke Tiziana Terenzi ( unisex )",
@@ -379,20 +377,38 @@ let cartVisible = false;
 window.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".product-card");
   const comboButtons = document.querySelectorAll(".select-combo");
+  const searchInput = document.getElementById("search");
+  const sectionLinks = document.querySelectorAll(".section-link");
+  const orderForm = document.getElementById("order-form");
+  const navbar = document.querySelector(".navbar");
+
+  // Создаем контейнер для результатов поиска
+  let searchResultsContainer = document.querySelector(".search-results");
+  if (!searchResultsContainer) {
+    searchResultsContainer = document.createElement("section");
+    searchResultsContainer.className = "search-results catalog-section";
+    searchResultsContainer.style.display = "none";
+    document.querySelector(".promo-offers").insertAdjacentElement("afterend", searchResultsContainer);
+  }
+
+  // Обработчик прокрутки для navbar
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 
   // Обработчик для карточек каталога
   cards.forEach((card) => {
     const title = card.querySelector(".product-title").textContent.trim();
-    const imageSrc = card.querySelector("img")?.src || "";
+    const imageSrc = card.querySelector("img")?.src || "images/fallback.jpg";
     const priceDisplay = card.querySelector(".product-price");
     const mlButtons = card.querySelectorAll(".ml-buttons button");
-    let selectedML = null;
-
-    if (mlButtons.length > 0) {
-      selectedML = parseInt(card.querySelector(".ml-buttons .active")?.dataset.ml || mlButtons[0].dataset.ml);
-      highlightSelected(card.querySelector(`.ml-buttons button[data-ml="${selectedML}"]`));
-      updatePrice();
-    }
+    let selectedML = parseInt(card.querySelector(".ml-buttons .active")?.dataset.ml || mlButtons[0].dataset.ml);
+    highlightSelected(card.querySelector(`.ml-buttons button[data-ml="${selectedML}"]`));
+    updatePrice();
 
     mlButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -408,15 +424,14 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function updatePrice() {
-      const price = pricesByML[selectedML];
-      if (price) {
-        priceDisplay.textContent = `Цена: ${price.toLocaleString()} ₸`;
-      }
+      const basePrice = parseInt(priceDisplay.dataset.base);
+      const price = Math.round(basePrice * (pricesByML[selectedML] / pricesByML[50]));
+      priceDisplay.textContent = `Цена: ${price.toLocaleString()} ₸`;
     }
 
     const buyBtn = card.querySelector(".buy-btn");
     buyBtn.addEventListener("click", () => {
-      const price = pricesByML[selectedML];
+      const price = Math.round(parseInt(priceDisplay.dataset.base) * (pricesByML[selectedML] / pricesByML[50]));
       addToCart({ title, ml: selectedML, price, imageSrc, quantity: 1 });
       showNotification("Товар добавлен в корзину!");
     });
@@ -428,6 +443,133 @@ window.addEventListener("DOMContentLoaded", () => {
       const comboType = btn.dataset.combo;
       openComboModal(comboType);
     });
+  });
+
+  // Функция для поиска и отображения результатов
+  function searchPerfumes(searchTerm) {
+    const trimmedTerm = searchTerm.trim().toLowerCase();
+    const menSection = document.getElementById("men");
+    const womenSection = document.getElementById("women");
+    const unisexSection = document.getElementById("unisex");
+
+    // Скрываем каталоги, если есть поиск
+    menSection.style.display = trimmedTerm ? "none" : "block";
+    womenSection.style.display = trimmedTerm ? "none" : "block";
+    unisexSection.style.display = trimmedTerm ? "none" : "block";
+
+    // Очищаем и скрываем результаты поиска, если запрос пуст
+    searchResultsContainer.innerHTML = "";
+    searchResultsContainer.style.display = trimmedTerm ? "block" : "none";
+
+    if (!trimmedTerm) {
+      return;
+    }
+
+    // Собираем все карточки из каталогов
+    const allCards = document.querySelectorAll(".catalog .product-card");
+    const filteredCards = Array.from(allCards).filter(card => {
+      const title = card.querySelector(".product-title").textContent.trim().toLowerCase();
+      return title.includes(trimmedTerm);
+    });
+
+    // Создаем заголовок и каталог для результатов
+    if (filteredCards.length > 0) {
+      const title = document.createElement("h1");
+      title.className = "page-title";
+      title.textContent = "Результаты поиска";
+      searchResultsContainer.appendChild(title);
+
+      const catalog = document.createElement("div");
+      catalog.className = "catalog";
+      searchResultsContainer.appendChild(catalog);
+
+      // Клонируем и добавляем отфильтрованные карточки
+      filteredCards.forEach(card => {
+        const clonedCard = card.cloneNode(true);
+        // Добавляем обработчики для клонированной карточки
+        const clonedTitle = clonedCard.querySelector(".product-title").textContent.trim();
+        const clonedImageSrc = clonedCard.querySelector("img")?.src || "images/fallback.jpg";
+        const clonedPriceDisplay = clonedCard.querySelector(".product-price");
+        const clonedMlButtons = clonedCard.querySelectorAll(".ml-buttons button");
+        let clonedSelectedML = parseInt(clonedCard.querySelector(".ml-buttons .active")?.dataset.ml || clonedMlButtons[0].dataset.ml);
+
+        clonedMlButtons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            clonedSelectedML = parseInt(btn.dataset.ml);
+            clonedMlButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const basePrice = parseInt(clonedPriceDisplay.dataset.base);
+            const price = Math.round(basePrice * (pricesByML[clonedSelectedML] / pricesByML[50]));
+            clonedPriceDisplay.textContent = `Цена: ${price.toLocaleString()} ₸`;
+          });
+        });
+
+        const clonedBuyBtn = clonedCard.querySelector(".buy-btn");
+        clonedBuyBtn.addEventListener("click", () => {
+          const basePrice = parseInt(clonedPriceDisplay.dataset.base);
+          const price = Math.round(basePrice * (pricesByML[clonedSelectedML] / pricesByML[50]));
+          addToCart({
+            title: clonedTitle,
+            ml: clonedSelectedML,
+            price,
+            imageSrc: clonedImageSrc,
+            quantity: 1
+          });
+          showNotification("Товар добавлен в корзину!");
+        });
+
+        catalog.appendChild(clonedCard);
+      });
+    } else {
+      const noResults = document.createElement("p");
+      noResults.textContent = "Ничего не найдено";
+      noResults.style.textAlign = "center";
+      noResults.style.fontSize = "16px";
+      noResults.style.margin = "20px 0";
+      searchResultsContainer.appendChild(noResults);
+    }
+  }
+
+  // Обработчик для поиска
+  searchInput.addEventListener("input", () => {
+    searchPerfumes(searchInput.value);
+  });
+
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchPerfumes(searchInput.value);
+    }
+  });
+
+  // Обработчик для ссылок на секции
+  sectionLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const sectionId = link.getAttribute("href").substring(1);
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+      searchInput.value = "";
+      searchPerfumes("");
+    });
+  });
+
+  // Обработчик для формы заказа
+  orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const orderComment = document.getElementById("order-comment").value;
+    const city = document.getElementById("city").value;
+    const address = document.getElementById("address").value;
+    const deliveryComment = document.getElementById("delivery-comment").value;
+    sendOrderToWhatsApp({ name, phone, orderComment, city, address, deliveryComment });
+    document.getElementById("order-modal").style.display = "none";
+    orderForm.reset();
+  });
+
+  document.getElementById("close-order-modal").addEventListener("click", () => {
+    document.getElementById("order-modal").style.display = "none";
   });
 
   // Восстановить корзину при загрузке
@@ -522,6 +664,7 @@ function addComboToCart(comboType, selectedPerfumes) {
 
 // Добавление обычного товара в корзину
 function addToCart(newItem) {
+  newItem.imageSrc = newItem.imageSrc || "images/fallback.jpg";
   const existing = cart.find(item => item.title === newItem.title && item.ml === newItem.ml);
   if (existing) {
     existing.quantity++;
@@ -561,11 +704,14 @@ function createCartUI() {
       </div>
       <div class="cart-items"></div>
       <div class="cart-total">Итого: <span id="total-price">0₸</span></div>
-      <button id="checkout">Купить в WhatsApp</button>
+      <button id="order-btn">Заполнить данные</button>
     </div>
   `;
   document.body.appendChild(cartBox);
-  document.getElementById("checkout").addEventListener("click", sendOrderToWhatsApp);
+  document.getElementById("order-btn").addEventListener("click", () => {
+    document.querySelector(".cart").style.display = "none";
+    document.getElementById("order-modal").style.display = "flex";
+  });
   document.querySelector(".close-cart-btn").addEventListener("click", toggleCart);
 }
 
@@ -605,15 +751,17 @@ function updateCartNotification() {
 // Переключение видимости корзины
 function toggleCart() {
   const cart = document.querySelector(".cart");
-  if (cart) {
+  if (!cart) return;
+
+  if (cart.length === 0) {
+    cart.style.display = "none";
+    const cartIcon = document.querySelector(".cart-icon");
+    if (cartIcon) cartIcon.style.display = "none";
+    cartVisible = false;
+  } else {
     cart.style.display = cart.style.display === "none" ? "flex" : "none";
     if (cart.style.display === "flex") {
       renderCartItems();
-    } else if (cart.length === 0) {
-      cart.style.display = "none";
-      const cartIcon = document.querySelector(".cart-icon");
-      if (cartIcon) cartIcon.style.display = "none";
-      cartVisible = false;
     }
   }
 }
@@ -650,7 +798,6 @@ function renderCartItems() {
     container.appendChild(div);
   });
 
-  // Обработчики для кнопок удаления
   document.querySelectorAll(".remove-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const index = parseInt(btn.dataset.index);
@@ -664,7 +811,6 @@ function renderCartItems() {
     });
   });
 
-  // Обработчики для кнопок изменения количества
   document.querySelectorAll(".qty-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const index = parseInt(btn.dataset.index);
@@ -686,22 +832,23 @@ function renderCartItems() {
 }
 
 // Отправка в WhatsApp
-function sendOrderToWhatsApp() {
+function sendOrderToWhatsApp({ name, phone, orderComment, city, address, deliveryComment }) {
   if (cart.length === 0) {
     alert("Корзина пуста!");
     return;
   }
 
-  let message = "Здравствуйте! Я хочу заказать следующие парфюмы:\n\n";
+  let message = "Здравствуйте! Хочу оформить заказ:\n\n";
   let total = 0;
   cart.forEach((item, i) => {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
     message += `${i + 1}) ${item.title}, ${item.ml} мл × ${item.quantity} = ${itemTotal.toLocaleString()}₸\n`;
   });
-
-  message += `\nИтого: ${total.toLocaleString()}₸`;
-  const url = `https://wa.me/77718857832?text=${encodeURIComponent(message)}`;
+  message += `\nИтого: ${total.toLocaleString()}₸\n`;
+  message += `\nКонтакты:\nИмя: ${name}\nТелефон: ${phone}\nКомментарий: ${orderComment || '-'}\n`;
+  message += `\nДоставка:\nГород: ${city}\nАдрес: ${address}\nКомментарий к доставке: ${deliveryComment || '-'}`;
+  const url = `https://wa.me/+77718857832?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
 
