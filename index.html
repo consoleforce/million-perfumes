@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Parfum</title>
+  <title>Million Perfum</title>
   <link rel="stylesheet" href="style.css"/>
+  <script src="app.js" defer></script>
 </head>
 <body>
-
   <!-- 🔝 Навигационная панель -->
   <div class="navbar">
     <div class="navbar-left">
       <img src="images/favicon-32x32.png" alt="Логотип" class="logo" />
-      <strong>Million Perfums</strong>
+      <strong>Million Perfum</strong>
     </div>
     <div class="navbar-center">
-      <a href="index.html">Каталог</a>
+      <input type="text" id="search" placeholder="Поиск парфюма..." class="search-input">
+      <a href="#men" class="section-link">For Men</a>
+      <a href="#women" class="section-link">For Women</a>
+      <a href="#unisex" class="section-link">Unisex</a>
     </div>
     <div class="navbar-right">
       <a href="https://wa.me/77718857832" target="_blank">
@@ -34,7 +37,7 @@
       <!-- Карточка COMBO BRO 2+1 -->
       <div class="promo-card" data-combo="combo-bro">
         <div class="promo-image">
-          <img src="images/combo-bro.jpg" alt="COMBO BRO 2+1">
+          <img src="images/combo-bro.jpg" alt="COMBO BRO 2+1" loading="lazy">
         </div>
         <div class="promo-info">
           <h2 class="promo-title">COMBO BRO 2+1</h2>
@@ -56,7 +59,7 @@
       <!-- Карточка COMBO MILLION 2+1 -->
       <div class="promo-card" data-combo="combo-million">
         <div class="promo-image">
-          <img src="images/combo-million.jpg" alt="COMBO MILLION 2+1">
+          <img src="images/combo-million.jpg" alt="COMBO MILLION 2+1" loading="lazy">
         </div>
         <div class="promo-info">
           <h2 class="promo-title">COMBO MILLION 2+1</h2>
@@ -78,7 +81,7 @@
       <!-- Карточка STUDENT COMBO 2+1 -->
       <div class="promo-card" data-combo="student-combo">
         <div class="promo-image">
-          <img src="images/student-combo.jpg" alt="STUDENT COMBO 2+1">
+          <img src="images/student-combo.jpg" alt="STUDENT COMBO 2+1" loading="lazy">
         </div>
         <div class="promo-info">
           <h2 class="promo-title">STUDENT COMBO 2+1</h2>
@@ -99,30 +102,30 @@
     </div>
   </section>
 
-  <!-- 🛍️ Каталог -->
-  <h1 class="page-title">Каталог парфюмов</h1>
-  <div class="catalog">
-    <!-- 🔹 Пример карточки товара -->
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/m1.jpg" alt="Парфюм">
-        
-      </div>
-      <div class="product-info">
-        <h2 class="product-title">Sauvage Eau de Parfum Dior</h2>
-        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
-        <div class="ml-buttons">
-          <button data-ml="20">20 мл</button>
-          <button data-ml="30">30 мл</button>
-          <button data-ml="50" class="active">50 мл</button>
-          <button data-ml="100">100 мл</button>
+  <!-- 🛍️ Секция For Men -->
+  <section id="men" class="catalog-section">
+    <h1 class="page-title">For Men</h1>
+    <div class="catalog">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/m1.jpg" alt="Sauvage Eau de Parfum Dior" loading="lazy">
         </div>
-        <div class="card-actions">
-          <button class="btn-primary buy-btn">Купить</button>
+        <div class="product-info">
+          <h2 class="product-title">Sauvage Eau de Parfum Dior</h2>
+          <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+          <div class="ml-buttons">
+            <button data-ml="20">20 мл</button>
+            <button data-ml="30">30 мл</button>
+            <button data-ml="50" class="active">50 мл</button>
+            <button data-ml="100">100 мл</button>
+          </div>
+          <div class="card-actions">
+            <button class="btn-primary buy-btn">Купить</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="product-card">
+      <!-- Добавьте другие мужские парфюмы здесь -->
+       <div class="product-card">
       <div class="product-image">
         <img src="images/m2.jpg" alt="Парфюм">
       </div>
@@ -236,7 +239,7 @@
         <img src="images/m8.jpg" alt="Парфюм">
       </div>
       <div class="product-info">
-        <h2 class="product-title">Vercase Man Eau Fraiche</h2>
+        <h2 class="product-title">Versace Man Eau Fraiche</h2>
         <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
         <div class="ml-buttons">
           <button data-ml="20">20 мл</button>
@@ -843,7 +846,42 @@
 
 
 
-    <div class="product-card">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- 🛍️ Секция For Women -->
+  <section id="women" class="catalog-section">
+    <h1 class="page-title">For Women</h1>
+    <div class="catalog">
+      <!-- Добавьте женские парфюмы здесь -->
+       <div class="product-card">
       <div class="product-image">
         <img src="images/w1.jpg" alt="Парфюм">
       </div>
@@ -1365,23 +1403,15 @@
         </div>
       </div>
     </div>
+    </div>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="product-card">
+  <!-- 🛍️ Секция Unisex -->
+  <section id="unisex" class="catalog-section">
+    <h1 class="page-title">Unisex</h1>
+    <div class="catalog">
+      <!-- Добавьте унисекс парфюмы здесь -->
+       <div class="product-card">
       <div class="product-image">
         <img src="images/u1.jpg" alt="Парфюм">
       </div>
@@ -2121,6 +2151,8 @@
     </div>
     
   </div>
+    </div>
+  </section>
 
   <!-- Модальное окно для выбора ароматов -->
   <div class="modal" id="combo-modal" style="display: none;">
@@ -2134,6 +2166,25 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Модальное окно для оформления заказа -->
+  <div class="modal" id="order-modal" style="display: none;">
+    <div class="modal-content">
+      <h2>Оформление заказа</h2>
+      <form id="order-form">
+        <h3>Контакты</h3>
+        <input type="text" id="name" placeholder="Имя" required>
+        <input type="tel" id="phone" placeholder="Номер телефона" required>
+        <textarea id="order-comment" placeholder="Комментарий к заказу"></textarea>
+        <h3>Доставка</h3>
+        <input type="text" id="city" placeholder="Город" required>
+        <input type="text" id="address" placeholder="Адрес" required>
+        <textarea id="delivery-comment" placeholder="Комментарий к доставке"></textarea>
+        <div class="modal-actions">
+          <button type="submit" id="submit-order">Оформить</button>
+          <button type="button" id="close-order-modal">Закрыть</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
