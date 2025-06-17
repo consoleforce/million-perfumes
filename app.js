@@ -53,7 +53,11 @@ const comboConfigs = {
       "Bleu de Chanel ( мужской )",
       "Allure Homme Sport Eau Extreme Chanel ( мужской )",
       "Emporio Armani Stronger With You Giorgio Armani ( мужской )",
-
+      "Dior Homme Intense 2011 Dior ( мужской )",
+      "Hugo Boss Bottled Unlimited ( мужской )",
+      "Invictus Aqua (2018) Rabanne ( мужской )",
+      "212 Sexy Men Carolina Herrera ( мужской )",
+      "Phantom Rabanne ( мужской )",
       "Miss Dior Blooming Bouquet ( женский )",
       "Chance Eau Tendre Chanel ( женский )",
       "Good Girl Gone Bad by Kilian ( женский )",
@@ -82,8 +86,8 @@ const comboConfigs = {
       "Roses Must Montale ( женский )",
       "Dark Purple Montale ( женский )",
       "Dolce Violet Dolce&Gabbana ( женский )",
-      "Miss Dior Blooming Bouquet ( женский )",
-
+      "Dolce Peony Dolce&Gabbana ( женский )",
+      "Delina Exclusif Parfums de Marly ( женский )",
       "Angels' Share By Kilian ( unisex )",
       "Kirke Tiziana Terenzi ( unisex )",
       "Gumin Tiziana Terenzi ( unisex )",
@@ -124,7 +128,10 @@ const comboConfigs = {
       "Oud Maracuja Maison Crivelli ( unisex )",
       "Escentric 04 Escentric Molecules ( unisex )",
       "Black Afgano Nasomatto ( unisex )",
-      "Mukhallat Montale ( unisex )"
+      "Mukhallat Montale ( unisex )",
+      "Intoxicated By Kilian ( unisex )",
+      "Hibiscus Mahajad Maison Crivelli ( unisex )",
+      "More Than Words Xerojoff ( unisex )"
     ]
   },
   "combo-million": {
@@ -174,7 +181,11 @@ const comboConfigs = {
       "Bleu de Chanel ( мужской )",
       "Allure Homme Sport Eau Extreme Chanel ( мужской )",
       "Emporio Armani Stronger With You Giorgio Armani ( мужской )",
-
+      "Dior Homme Intense 2011 Dior ( мужской )",
+      "Hugo Boss Bottled Unlimited ( мужской )",
+      "Invictus Aqua (2018) Rabanne ( мужской )",
+      "212 Sexy Men Carolina Herrera ( мужской )",
+      "Phantom Rabanne ( мужской )",
       "Miss Dior Blooming Bouquet ( женский )",
       "Chance Eau Tendre Chanel ( женский )",
       "Good Girl Gone Bad by Kilian ( женский )",
@@ -203,8 +214,8 @@ const comboConfigs = {
       "Roses Must Montale ( женский )",
       "Dark Purple Montale ( женский )",
       "Dolce Violet Dolce&Gabbana ( женский )",
-      "Miss Dior Blooming Bouquet ( женский )",
-
+      "Dolce Peony Dolce&Gabbana ( женский )",
+      "Delina Exclusif Parfums de Marly ( женский )",
       "Angels' Share By Kilian ( unisex )",
       "Kirke Tiziana Terenzi ( unisex )",
       "Gumin Tiziana Terenzi ( unisex )",
@@ -245,7 +256,10 @@ const comboConfigs = {
       "Oud Maracuja Maison Crivelli ( unisex )",
       "Escentric 04 Escentric Molecules ( unisex )",
       "Black Afgano Nasomatto ( unisex )",
-      "Mukhallat Montale ( unisex )"
+      "Mukhallat Montale ( unisex )",
+      "Intoxicated By Kilian ( unisex )",
+      "Hibiscus Mahajad Maison Crivelli ( unisex )",
+      "More Than Words Xerojoff ( unisex )"
     ]
   },
   "student-combo": {
@@ -295,7 +309,11 @@ const comboConfigs = {
       "Bleu de Chanel ( мужской )",
       "Allure Homme Sport Eau Extreme Chanel ( мужской )",
       "Emporio Armani Stronger With You Giorgio Armani ( мужской )",
-
+      "Dior Homme Intense 2011 Dior ( мужской )",
+      "Hugo Boss Bottled Unlimited ( мужской )",
+      "Invictus Aqua (2018) Rabanne ( мужской )",
+      "212 Sexy Men Carolina Herrera ( мужской )",
+      "Phantom Rabanne ( мужской )",
       "Miss Dior Blooming Bouquet ( женский )",
       "Chance Eau Tendre Chanel ( женский )",
       "Good Girl Gone Bad by Kilian ( женский )",
@@ -324,8 +342,8 @@ const comboConfigs = {
       "Roses Must Montale ( женский )",
       "Dark Purple Montale ( женский )",
       "Dolce Violet Dolce&Gabbana ( женский )",
-      "Miss Dior Blooming Bouquet ( женский )",
-
+      "Dolce Peony Dolce&Gabbana ( женский )",
+      "Delina Exclusif Parfums de Marly ( женский )",
       "Angels' Share By Kilian ( unisex )",
       "Kirke Tiziana Terenzi ( unisex )",
       "Gumin Tiziana Terenzi ( unisex )",
@@ -366,7 +384,10 @@ const comboConfigs = {
       "Oud Maracuja Maison Crivelli ( unisex )",
       "Escentric 04 Escentric Molecules ( unisex )",
       "Black Afgano Nasomatto ( unisex )",
-      "Mukhallat Montale ( unisex )"
+      "Mukhallat Montale ( unisex )",
+      "Intoxicated By Kilian ( unisex )",
+      "Hibiscus Mahajad Maison Crivelli ( unisex )",
+      "More Than Words Xerojoff ( unisex )"
     ]
   }
 };
@@ -424,14 +445,14 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function updatePrice() {
-      const basePrice = parseInt(priceDisplay.dataset.base);
-      const price = Math.round(basePrice * (pricesByML[selectedML] / pricesByML[50]));
+      // Используем цену напрямую из pricesByML
+      const price = pricesByML[selectedML] || 0;
       priceDisplay.textContent = `Цена: ${price.toLocaleString()} ₸`;
     }
 
     const buyBtn = card.querySelector(".buy-btn");
     buyBtn.addEventListener("click", () => {
-      const price = Math.round(parseInt(priceDisplay.dataset.base) * (pricesByML[selectedML] / pricesByML[50]));
+      const price = pricesByML[selectedML] || 0; // Берем цену напрямую из pricesByML
       addToCart({ title, ml: selectedML, price, imageSrc, quantity: 1 });
       showNotification("Товар добавлен в корзину!");
     });
@@ -498,16 +519,14 @@ window.addEventListener("DOMContentLoaded", () => {
             clonedSelectedML = parseInt(btn.dataset.ml);
             clonedMlButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            const basePrice = parseInt(clonedPriceDisplay.dataset.base);
-            const price = Math.round(basePrice * (pricesByML[clonedSelectedML] / pricesByML[50]));
+            const price = pricesByML[clonedSelectedML] || 0;
             clonedPriceDisplay.textContent = `Цена: ${price.toLocaleString()} ₸`;
           });
         });
 
         const clonedBuyBtn = clonedCard.querySelector(".buy-btn");
         clonedBuyBtn.addEventListener("click", () => {
-          const basePrice = parseInt(clonedPriceDisplay.dataset.base);
-          const price = Math.round(basePrice * (pricesByML[clonedSelectedML] / pricesByML[50]));
+          const price = pricesByML[clonedSelectedML] || 0;
           addToCart({
             title: clonedTitle,
             ml: clonedSelectedML,
