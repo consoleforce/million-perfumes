@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Parfum</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- 🔝 Навигационная панель -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="images/favicon-32x32.png" alt="Логотип" class="logo" />
+      <strong>Million Perfums</strong>
+    </div>
+    <div class="navbar-center">
+      <a href="index.html">Каталог</a>
+    </div>
+    <div class="navbar-right">
+      <a href="https://wa.me/77718857832" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp" class="icon" />
+      </a>
+      <a href="https://instagram.com/million.perfumes_/" target="_blank">
+        <img src="images/instagram.png" alt="Instagram" class="icon" />
+      </a>
+    </div>
+  </div>
+
+  <!-- 🛍️ Секция "Выгодное предложение" -->
+  <section class="promo-offers">
+    <h1 class="page-title">Выгодное предложение</h1>
+    <div class="promo-container">
+      <!-- Карточка COMBO BRO 2+1 -->
+      <div class="promo-card" data-combo="combo-bro">
+        <div class="promo-image">
+          <img src="images/combo-bro.jpg" alt="COMBO BRO 2+1">
+        </div>
+        <div class="promo-info">
+          <h2 class="promo-title">COMBO BRO 2+1</h2>
+          <p class="promo-description">
+            • 3 аромата на выбор по 20 мл (общий объем 60 мл).<br>
+            • Можно выбрать одинаковые ароматы.<br>
+            • БЕСПЛАТНАЯ доставка по РК.
+          </p>
+          <div class="promo-price">
+            <span class="old-price">45,000 тг.</span>
+            <span class="new-price">35,000 тг.</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-primary select-combo" data-combo="combo-bro">Выбрать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка COMBO MILLION 2+1 -->
+      <div class="promo-card" data-combo="combo-million">
+        <div class="promo-image">
+          <img src="images/combo-million.jpg" alt="COMBO MILLION 2+1">
+        </div>
+        <div class="promo-info">
+          <h2 class="promo-title">COMBO MILLION 2+1</h2>
+          <p class="promo-description">
+            • 3 аромата на выбор по 30 мл (общий объем 90 мл).<br>
+            • Можно выбрать одинаковые ароматы.<br>
+            • БЕСПЛАТНАЯ доставка по РК.
+          </p>
+          <div class="promo-price">
+            <span class="old-price">65,000 тг.</span>
+            <span class="new-price">49,990 тг.</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-primary select-combo" data-combo="combo-million">Выбрать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка STUDENT COMBO 2+1 -->
+      <div class="promo-card" data-combo="student-combo">
+        <div class="promo-image">
+          <img src="images/student-combo.jpg" alt="STUDENT COMBO 2+1">
+        </div>
+        <div class="promo-info">
+          <h2 class="promo-title">STUDENT COMBO 2+1</h2>
+          <p class="promo-description">
+            • 3 аромата на выбор по 10 мл (общий объем 30 мл).<br>
+            • Стойкость на 2-3 дня.<br>
+            • БЕСПЛАТНАЯ доставка по РК.
+          </p>
+          <div class="promo-price">
+            <span class="old-price">29,990 тг.</span>
+            <span class="new-price">21,990 тг.</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-primary select-combo" data-combo="student-combo">Выбрать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🛍️ Каталог -->
+  <h1 class="page-title">Каталог парфюмов</h1>
+  <div class="catalog">
+    <!-- 🔹 Пример карточки товара -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m1.jpg" alt="Парфюм">
+        
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Sauvage Eau de Parfum Dior</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m2.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Sauvage Elixir Dior</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <!-- 🔹 Добавь другие карточки ниже -->
+     <div class="product-card">
+      <div class="product-image">
+        <img src="images/m3.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Versace Pour Homme Dylan Blue</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m4.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">K by Dolce&Gabbana</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m5.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Light Blue pour Homme Dolce&Gabbana</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m6.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Haltane Parfums de Marly</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m7.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Explorer Ultra Blue Montblanc</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m8.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Vercase Man Eau Fraiche</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m9.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Royal Eagle Gold Stefano Ricci</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m10.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">1 Million Rabanne</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m11.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Le Male Jean Paul Gaultier    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m12.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Dior Homme Cologne 2022    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m13.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Epic Man Amouage    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m14.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Interlude Man Amouage    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m15.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Blue Seduction Antonio Banderas    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m16.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Eau de Lacoste L.12.12 White</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m17.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Aventus Creed    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m18.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Absolu Aventus Creed    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m19.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Meteore Louis Vuitton    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m20.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Imagination Louis Vuitton    </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m21.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">L'Immensite Louis Vuitton</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m22.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oligarch Roja Dove</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m23.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Colonia C.L.U.B. Acqua di Parma</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m24.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Explorer Montblanc</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m25.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Elysium Pour Homme Parfum Cologne Roja Dove</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m26.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">212 VIP Men Carolina Herrera</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m27.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Invictus Rabanne </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m28.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Tygar Bvlgari </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m29.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Versace Pour Homme </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m30.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Eros Versace </h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m31.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Le Beau Paradise Garden Jean Paul Gaultier</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m32.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Le Male Le Parfum Jean Paul Gaultier</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m33.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Le Beau Jean Paul Gaultier</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m34.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Emporio Armani Stronger With You Tobacco Giorgio Armani</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m35.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Dior Homme Sport 2012 Dior</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m36.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Emporio Armani Stronger With You Intensely</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m37.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Acqua di Gio Armani</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m38.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Bleu de Chanel</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m39.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Allure Homme Sport Eau Extreme Chanel</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/m40.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Emporio Armani Stronger With You Giorgio Armani</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w1.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Miss Dior Blooming Bouquet</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w2.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Chance Eau Tendre Chanel</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w3.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Good Girl Gone Bad by Kilian</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w4.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Black Opium Yves Saint Laurent</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w5.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Coco Mademoiselle Chanel</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w6.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Blanche Byredo</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w7.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Flora by Gucci Eau de Parfum Gucci</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w8.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Peony & Blush Suede Jo Malone London</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w9.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Gaultier Divine Jean Paul Gaultier</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w10.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Bright Crystal Versace</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w11.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">D&G Anthology L'Imperatrice 3</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w12.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Cheap&Chic I Love Love Moschino</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w13.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Lady Million Rabanne</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w14.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Bombshell Eau de Parfum Victoria's Secret</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w15.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Eau So Sexy Victoria's Secret</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w16.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Carmina Creed</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w17.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Si Passione Giorgio Armani</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w18.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Libre Yves Saint Laurent</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w19.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Lacoste Pour Femme</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w20.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Honour Woman Amouage</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w21.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Lucky Wish Anna Sui</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w22.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">My Way Giorgio Armani</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w23.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Eclat d'Arpege Lanvin</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w24.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Flora Gorgeous Magnolia Gucci</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w25.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Yara Lattafa Perfumes</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w26.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Roses Must Montale</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w27.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Dark Purple Montale</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w28.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Dolce Violet Dolce&Gabbana</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/w29.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Dole Peony Dolce&Gabbana</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u1.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Angels' Share By Kilian</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u2.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Kirke Tiziana Terenzi</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u3.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Gumin Tiziana Terenzi</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u4.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Layton Parfums de Marly</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u5.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Baccarat Rouge 540 Maison Francis Kurkdjian</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u6.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oud for Greatness Initio Parfums Prives</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u7.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Fleur Narcotique Ex Nihilo</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u8.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Amber Musk Montale</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u9.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Blue Talisman Ex Nihilo</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u10.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Molecule 02 Escentric</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u11.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">More Than Words Xerjoff</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u12.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Colonia Futura Acqua di Parma</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u13.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">London WIDIAN</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u14.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oceania Roja Dove</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u15.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Blue Moon Ginger Dash by Kilian</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u16.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Erba Pura Magica Sospiro Perfumes</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u17.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oud Minerale Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u18.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Arabians Tonka Montale</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u19.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Black Phantom By Kilian</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u20.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Musk Abiyad Afnan</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u21.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Ganymede Marc-Antoine Barrois</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u22.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Greenley Parfums de Marly</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u23.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Pacific Chill Louis Vuitton</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u24.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Silver Moutain Water Creed</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u25.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Tobacco Vanille Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u26.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oud Minerale Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u27.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Must Kashmir Attar Collection</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u28.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Ombre Leather (2018) Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u29.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oud Wood Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u30.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Lost Cherry Tom Ford</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u31.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Afternoon Swim Louis Vuitton</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u32.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Ombre Nomade Louis Vuitton</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u33.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Ani Nishane</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u34.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Megamare Orto Parisi</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u35.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Nefs Nishane</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u36.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Bois Imperial Essential Parfums</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u37.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Black Pepper & Amber, Neroli Zielinski & Rozen</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u38.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Oud Maracuja Maison Crivelli</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u39.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Escentric 04 Escentric Molecules</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u40.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Black Afgano Nasomatto</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/u41.jpg" alt="Парфюм">
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Mukhallat Montale</h2>
+        <div class="product-price" data-base="5000">Цена: 5000 ₸</div>
+        <div class="ml-buttons">
+          <button data-ml="20">20 мл</button>
+          <button data-ml="30">30 мл</button>
+          <button data-ml="50" class="active">50 мл</button>
+          <button data-ml="100">100 мл</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn-primary buy-btn">Купить</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Модальное окно для выбора ароматов -->
+  <div class="modal" id="combo-modal" style="display: none;">
+    <div class="modal-content">
+      <h2 id="modal-title">Выберите 3 аромата</h2>
+      <div class="perfume-list"></div>
+      <div class="modal-actions">
+        <button id="confirm-combo" disabled>Подтвердить</button>
+        <button id="close-modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
