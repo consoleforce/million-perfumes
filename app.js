@@ -701,7 +701,7 @@ function sendOrderToWhatsApp() {
   });
 
   message += `\nИтого: ${total.toLocaleString()}₸`;
-  const url = `https://wa.me/77715185800?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/77718857832?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
 
